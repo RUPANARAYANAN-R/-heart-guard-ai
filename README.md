@@ -1,12 +1,3 @@
-This error occurs because the code block for the Mermaid diagram is not closed correctly. When the closing backticks (```) are missing, GitHub's parser tries to read the next line of text ("Technology Stack") as part of the diagram, which causes the parse error.
-
-To fix this, you must replace the entire content of your README.md file to ensure all formatting is correct.
-
-Solution: Complete README Content
-Delete everything currently in your README.md file and replace it with the complete, corrected code below. Click the "Copy" button in the top-right corner of the block and paste it directly into the GitHub editor.
-
-Markdown
-
 # ❤️‍🩹 HeartGuard AI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -65,90 +56,80 @@ This tool provides a simple REST API and an interactive dashboard for users to i
 
 ## How It Works
 
-The project follows a standard machine learning pipeline. The architecture is designed to be simple and modular, separating the offline training process from the online prediction service.
+The architecture separates the offline training process from the online prediction service. This text-based flowchart is guaranteed to render correctly on GitHub.
 
-```mermaid
-graph TD
-    subgraph "Prediction Pipeline (Online)"
-        direction LR
-        UI[Client / Dashboard] --> API{FastAPI Service};
-        API --> P1[1. Validate & Preprocess Data];
-        P1 --> P2[2. Load Saved Model];
-        P2 --> P3[3. Perform Inference];
-        P3 --> P4[4. Return Prediction];
-        P4 --> UI;
-    end
+**Offline Training Pipeline:**
+[Raw Dataset]  -->  [1. Data Cleaning & Preprocessing]  -->  [2. Model Training]  -->  [Saved Model File]
 
-    subgraph "Training Pipeline (Offline)"
-        direction TB
-        DS[Raw Dataset] --> T1[Data Cleaning & Feature Engineering];
-        T1 --> T2[Model Training & Validation];
-        T2 --> MA[Save Model Artifact];
-    end
 
-    P2 -- Loads --- MA;
-Technology Stack
+**Online Prediction Pipeline:**
+[User Input]  -->  [FastAPI Backend]  -->  [Load Saved Model]  -->  [Make Prediction]  -->  [Display Result]
+
+
+---
+
+## Technology Stack
+
 This project is built with modern, open-source technologies.
 
-Backend: Python, FastAPI
+- **Backend:** Python, FastAPI
+- **Machine Learning:** Scikit-learn, Pandas, NumPy
+- **Dashboard:** Streamlit
+- **Deployment:** Docker, Uvicorn
+- **Code Quality:** Black, isort
 
-Machine Learning: Scikit-learn, Pandas, NumPy
+---
 
-Dashboard: Streamlit
+## Getting Started
 
-Deployment: Docker, Uvicorn
-
-Code Quality: Black, isort
-
-Getting Started
 Follow these instructions to get a local copy up and running.
 
-Prerequisites
+### Prerequisites
+
 Make sure you have the following installed on your system:
+- Python 3.9+ and `pip`
+- Git
+- Docker (optional, for containerized deployment)
 
-Python 3.9+ and pip
+### Installation
 
-Git
+1.  **Clone the repository:**
+    ```sh
+    git clone [https://github.com/your-username/heartguard-ai.git](https://github.com/your-username/heartguard-ai.git)
+    cd heartguard-ai
+    ```
 
-Docker (optional, for containerized deployment)
+2.  **Create and activate a virtual environment:**
+    ```sh
+    # For macOS/Linux
+    python3 -m venv venv
+    source venv/bin/activate
 
-Installation
-Clone the repository:
+    # For Windows
+    python -m venv venv
+    .\venv\Scripts\activate
+    ```
 
-Bash
+3.  **Install the required dependencies:**
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-git clone [https://github.com/your-username/heartguard-ai.git](https://github.com/your-username/heartguard-ai.git)
-cd heartguard-ai
-Create and activate a virtual environment:
+4.  **Set up environment variables:**
+    Create a `.env` file in the root directory by copying the example file.
+    ```sh
+    cp .env.example .env
+    ```
+    (No changes are needed in `.env` for the default setup, but you can configure API ports here.)
 
-Bash
+---
 
-# For macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
+## Usage
 
-# For Windows
-python -m venv venv
-.\venv\Scripts\activate
-Install the required dependencies:
+### Running the API
 
-Bash
-
-pip install -r requirements.txt
-Set up environment variables:
-Create a .env file in the root directory by copying the example file.
-
-Bash
-
-cp .env.example .env
-(No changes are needed in .env for the default setup, but you can configure API ports here.)
-
-Usage
-Running the API
 To start the FastAPI server, run the following command from the root directory:
-
-Bash
-
+```sh
 uvicorn app.main:app --reload
 The API will be available at http://127.0.0.1:8000. You can access the interactive API documentation (Swagger UI) at http://127.0.0.1:8000/docs.
 
