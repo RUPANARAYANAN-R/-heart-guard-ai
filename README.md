@@ -228,10 +228,9 @@ Open a Pull Request
 
 ---
 
-## Project License
-Distributed under the MIT License. See LICENSE.txt for more information.
+## Important Disclaimer
 
----
+### This project is for educational and research purposes only. The predictions made by HeartGuard AI are not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified health provider with any questions you may have regarding a medical condition.
 
 ## Contact Information
 ### Rupa Narayanan
@@ -240,10 +239,12 @@ Distributed under the MIT License. See LICENSE.txt for more information.
 
 ---
 
+
 ### Project Link: https://github.com/your-username/heartguard-ai
 
 ---
 
-## Important Disclaimer
+## Project License
+Distributed under the MIT License. See LICENSE.txt for more information.
 
-### This project is for educational and research purposes only. The predictions made by HeartGuard AI are not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified health provider with any questions you may have regarding a medical condition.
+---
