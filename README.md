@@ -144,32 +144,32 @@ This will start both the FastAPI backend and the Streamlit frontend.
 ## Model Training
 To train the model from scratch, you can run the training script. This script will process the data, train the model, evaluate it, and save the final model artifact.
 
-Bash
+    Bash
 
-python scripts/train_model.py
+    python scripts/train_model.py
 API Endpoints
 The primary endpoint for prediction is: POST /predict.
 
 Description: Accepts patient data and returns a heart disease risk prediction.
 
-Body (JSON):
+    Body (JSON):
 
-JSON
+    JSON
 
-{
-  "age": 52, "sex": 1, "cp": 0, "trestbps": 125, "chol": 212, "fbs": 0,
-  "restecg": 1, "thalach": 168, "exang": 0, "oldpeak": 1.0, "slope": 2,
-  "ca": 2, "thal": 3
-}
-Success Response (200):
+    {
+    "age": 52, "sex": 1, "cp": 0, "trestbps": 125, "chol": 212, "fbs": 0,
+    "restecg": 1, "thalach": 168, "exang": 0, "oldpeak": 1.0, "slope": 2,
+    "ca": 2, "thal": 3
+    }
+    Success Response (200):
 
-JSON
+    JSON
 
-{
-  "prediction": 0,
-  "prediction_label": "No Disease",
-  "probability": 0.92
-}
+    {
+    "prediction": 0,
+    "prediction_label": "No Disease",
+    "probability": 0.92
+    }
 (Note: prediction: 0 means low risk and prediction: 1 means high risk.)
 
 ---
@@ -177,31 +177,31 @@ JSON
 ## Project Roadmap
 [ ] Phase 1: Core Functionality
 
-[x] Model Training and Evaluation
+    [x] Model Training and Evaluation
 
-[x] REST API with FastAPI
+    [x] REST API with FastAPI
 
-[x] Interactive Dashboard with Streamlit
+    [x] Interactive Dashboard with Streamlit
 
-[x] Dockerization
+    [x] Dockerization
 
 [ ] Phase 2: Enhancements
 
-[ ] Add user authentication.
+    [ ] Add user authentication.
 
-[ ] Integrate with a database to store prediction history.
+    [ ] Integrate with a database to store prediction history.
 
-[ ] Perform hyperparameter tuning.
+    [ ] Perform hyperparameter tuning.
 
-[ ] Expand dataset.
+    [ ] Expand dataset.
 
-[ ] Phase 3: Advanced Features
+    [ ] Phase 3: Advanced Features
 
-[ ] Incorporate explainable AI (XAI) techniques (e.g., SHAP, LIME).
+    [ ] Incorporate explainable AI (XAI) techniques (e.g., SHAP, LIME).
 
-[ ] Explore deep learning models for ECG signal analysis.
+    [ ] Explore deep learning models for ECG signal analysis.
 
-[ ] Deploy to a cloud platform (AWS, GCP, Azure).
+    [ ] Deploy to a cloud platform (AWS, GCP, Azure).
 
 See the open issues for a full list of proposed features and known issues.
 
@@ -212,11 +212,11 @@ Contributions are greatly appreciated. Please follow these steps:
 
 Fork the Project
 
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
+    Create your Feature Branch (git checkout -b feature/AmazingFeature)
 
-Commit your Changes (git commit -m 'Add some AmazingFeature')
+    Commit your Changes (git commit -m 'Add some AmazingFeature')
 
-Push to the Branch (git push origin feature/AmazingFeature)
+    Push to the Branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
