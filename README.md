@@ -57,12 +57,12 @@ The architecture separates the **offline training process** from the **online pr
 
 ### Offline Training Pipeline
 
-   [Raw Dataset] --> [1. Data Cleaning & Preprocessing] --> [2. Model Training] --> [Saved Model File]
+    [Raw Dataset] --> [1. Data Cleaning & Preprocessing] --> [2. Model Training] --> [Saved Model File]
 
 
 ### Online Prediction Pipeline
  
-   [User Input] --> [FastAPI Backend] --> [Load Saved Model] --> [Make Prediction] --> [Display Result]
+    [User Input] --> [FastAPI Backend] --> [Load Saved Model] --> [Make Prediction] --> [Display Result]
 
 
 ---
