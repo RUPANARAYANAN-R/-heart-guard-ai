@@ -232,15 +232,9 @@ Distributed under the MIT License. See LICENSE.txt for more information.
 
 ### Email: rupanarayanan333@gmail.com
 
-### Phone: +91 6382552533
-
 ---
 
 ### Project Link: https://github.com/your-username/heartguard-ai
-
----
-
-## ⚠️ Important Security Note: Sharing your personal phone number publicly is not recommended as it can expose you to spam and other privacy risks.
 
 ---
 
