@@ -16,11 +16,7 @@ Leveraging machine learning to predict the risk of cardiovascular disease, provi
 - [How It Works](#how-it-works)
 - [Technology Stack](#technology-stack)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
 - [Usage](#usage)
-  - [Running the API](#running-the-api)
-  - [Running the Dashboard](#running-the-dashboard)
 - [Model Training](#model-training)
 - [API Endpoints](#api-endpoints)
 - [Roadmap](#roadmap)
@@ -53,14 +49,14 @@ This tool provides a simple REST API and an interactive dashboard for users to i
 
 ## How It Works
 
-The architecture separates the offline training process from the online prediction service. This text-based flowchart is guaranteed to render correctly on GitHub.
+The architecture separates the offline training process from the online prediction service.
 
 **Offline Training Pipeline:**
-[Raw Dataset]  -->  [1. Data Cleaning & Preprocessing]  -->  [2. Model Training]  -->  [Saved Model File]
+[Raw Dataset] --> [1. Data Cleaning & Preprocessing] --> [2. Model Training] --> [Saved Model File]
 
 
 **Online Prediction Pipeline:**
-[User Input]  -->  [FastAPI Backend]  -->  [Load Saved Model]  -->  [Make Prediction]  -->  [Display Result]
+[User Input] --> [FastAPI Backend] --> [Load Saved Model] --> [Make Prediction] --> [Display Result]
 
 
 ---
@@ -83,7 +79,6 @@ Follow these instructions to get a local copy up and running.
 
 ### Prerequisites
 
-Make sure you have the following installed on your system:
 - Python 3.9+ and `pip`
 - Git
 - Docker (optional, for containerized deployment)
@@ -91,33 +86,33 @@ Make sure you have the following installed on your system:
 ### Installation
 
 1.  **Clone the repository:**
-    ```sh
+    ```bash
     git clone [https://github.com/your-username/heartguard-ai.git](https://github.com/your-username/heartguard-ai.git)
     cd heartguard-ai
     ```
 
 2.  **Create and activate a virtual environment:**
-    ```sh
+    ```bash
     # For macOS/Linux
     python3 -m venv venv
     source venv/bin/activate
-
+    
     # For Windows
     python -m venv venv
     .\venv\Scripts\activate
     ```
 
 3.  **Install the required dependencies:**
-    ```sh
+    ```bash
     pip install -r requirements.txt
     ```
 
 4.  **Set up environment variables:**
     Create a `.env` file in the root directory by copying the example file.
-    ```sh
+    ```bash
     cp .env.example .env
     ```
-    (No changes are needed in `.env` for the default setup, but you can configure API ports here.)
+    (No changes are needed in `.env` for the default setup.)
 
 ---
 
@@ -126,11 +121,11 @@ Make sure you have the following installed on your system:
 ### Running the API
 
 To start the FastAPI server, run the following command from the root directory:
-```sh
+```bash
 uvicorn app.main:app --reload
 The API will be available at http://127.0.0.1:8000. You can access the interactive API documentation (Swagger UI) at http://127.0.0.1:8000/docs.
 
-## Running the Dashboard
+Running the Dashboard
 To launch the Streamlit dashboard, run:
 
 Bash
@@ -147,15 +142,13 @@ docker-compose up --build
 This will start both the FastAPI backend and the Streamlit frontend.
 
 Model Training
-To train the model from scratch, you can run the training script. The script will process the data from the data/ directory, train the model, evaluate it, and save the final model artifact to the models/ directory.
+To train the model from scratch, you can run the training script. This script will process the data, train the model, evaluate it, and save the final model artifact.
 
 Bash
 
 python scripts/train_model.py
 API Endpoints
-The primary endpoint for prediction is:
-
-POST /predict
+The primary endpoint for prediction is: POST /predict.
 
 Description: Accepts patient data and returns a heart disease risk prediction.
 
@@ -164,19 +157,9 @@ Body (JSON):
 JSON
 
 {
-  "age": 52,
-  "sex": 1,
-  "cp": 0,
-  "trestbps": 125,
-  "chol": 212,
-  "fbs": 0,
-  "restecg": 1,
-  "thalach": 168,
-  "exang": 0,
-  "oldpeak": 1.0,
-  "slope": 2,
-  "ca": 2,
-  "thal": 3
+  "age": 52, "sex": 1, "cp": 0, "trestbps": 125, "chol": 212, "fbs": 0,
+  "restecg": 1, "thalach": 168, "exang": 0, "oldpeak": 1.0, "slope": 2,
+  "ca": 2, "thal": 3
 }
 Success Response (200):
 
@@ -187,7 +170,7 @@ JSON
   "prediction_label": "No Disease",
   "probability": 0.92
 }
-Where prediction: 0 means low risk and prediction: 1 means high risk.
+(Where prediction: 0 means low risk and prediction: 1 means high risk.)
 
 Roadmap
 [ ] Phase 1: Core Functionality
@@ -202,13 +185,13 @@ Roadmap
 
 [ ] Phase 2: Enhancements
 
-[ ] Add user authentication for the dashboard.
+[ ] Add user authentication.
 
 [ ] Integrate with a database to store prediction history.
 
-[ ] Perform hyperparameter tuning for better model accuracy.
+[ ] Perform hyperparameter tuning.
 
-[ ] Expand dataset to include more diverse patient populations.
+[ ] Expand dataset.
 
 [ ] Phase 3: Advanced Features
 
@@ -221,9 +204,7 @@ Roadmap
 See the open issues for a full list of proposed features and known issues.
 
 Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
-
-Please follow these steps:
+Contributions are greatly appreciated. Please follow these steps:
 
 Fork the Project
 
@@ -234,8 +215,6 @@ Commit your Changes (git commit -m 'Add some AmazingFeature')
 Push to the Branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
-
-Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
 
 License
 Distributed under the MIT License. See LICENSE.txt for more information.
@@ -249,7 +228,7 @@ Phone: +91 6382552533
 
 Project Link: https://github.com/your-username/heartguard-ai
 
-⚠️ Important Security Note: Sharing your personal phone number publicly is not recommended as it can expose you to spam and other privacy risks. It is safer to use email or a professional networking profile for public contact information.
+⚠️ Important Security Note: Sharing your personal phone number publicly is not recommended as it can expose you to spam and other privacy risks.
 
 ⚠️ Disclaimer
-This project is for educational and research purposes only. The predictions made by HeartGuard AI are not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health providers with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read or seen in this application.
+This project is for educational and research purposes only. The predictions made by HeartGuard AI are not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified health provider with any questions you may have regarding a medical condition
