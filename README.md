@@ -5,7 +5,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-Leveraging machine learning to predict the risk of cardiovascular disease, providing an early warning system for proactive healthcare.
+Leveraging **machine learning** to predict the risk of **cardiovascular disease**, providing an early warning system for proactive healthcare.
 
 ---
 
@@ -16,46 +16,46 @@ Leveraging machine learning to predict the risk of cardiovascular disease, provi
 - [How It Works](#how-it-works)
 - [Technology Stack](#technology-stack)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
+- [Project Usage](#project-usage)
 - [Model Training](#model-training)
 - [API Endpoints](#api-endpoints)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Disclaimer](#disclaimer)
+- [Project Roadmap](#project-roadmap)
+- [Project Contributing](#project-contributing)
+- [Project License](#project-license)
+- [Contact Information](#contact-information)
+- [Important Disclaimer](#important-disclaimer)
 
 ---
 
 ## About The Project
 
-Cardiovascular diseases (CVDs) are the leading cause of death globally. Early detection and risk stratification are crucial for effective prevention and management. HeartGuard AI is a project designed to address this challenge by using a machine learning model to predict a patient's risk of heart disease based on a set of medical and demographic attributes.
+**Cardiovascular diseases (CVDs)** are the leading cause of death globally. Early detection and risk stratification are crucial for effective prevention and management. **HeartGuard AI** is a project designed to address this challenge by using a machine learning model to predict a patient's risk of heart disease based on a set of medical and demographic attributes.
 
-This tool provides a simple REST API and an interactive dashboard for users to input patient data and receive an instant risk assessment. The core of this project is a trained classification model that has learned patterns from historical patient data.
+This tool provides a simple **REST API** and an interactive **dashboard** for users to input patient data and receive an instant risk assessment. The core of this project is a trained classification model that has learned patterns from historical patient data.
 
-**Dataset:** This model was trained on the [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+disease), a well-known benchmark in the machine learning community.
+**Dataset:** This model was trained on the **[UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+disease)**, a well-known benchmark in the machine learning community.
 
 ---
 
 ## Key Features
 
-✨ **High-Accuracy Prediction:** Utilizes a Gradient Boosting Classifier for robust and accurate risk prediction.
-✨ **RESTful API:** A clean, fast, and scalable API built with FastAPI for easy integration into other applications.
-✨ **Interactive Dashboard:** A user-friendly web interface created with Streamlit for real-time predictions and data visualization.
+✨ **High-Accuracy Prediction:** Utilizes a **Gradient Boosting Classifier** for robust and accurate risk prediction.
+✨ **RESTful API:** A clean, fast, and scalable API built with **FastAPI** for easy integration into other applications.
+✨ **Interactive Dashboard:** A user-friendly web interface created with **Streamlit** for real-time predictions and data visualization.
 ✨ **Feature Importance:** Provides insights into which factors are most influential in predicting heart disease risk.
-✨ **Containerized:** Docker support for easy setup, deployment, and scalability.
+✨ **Containerized:** **Docker** support for easy setup, deployment, and scalability.
 
 ---
 
 ## How It Works
 
-The architecture separates the offline training process from the online prediction service.
+The architecture separates the **offline training process** from the **online prediction service**.
 
-**Offline Training Pipeline:**
+### Offline Training Pipeline
 [Raw Dataset] --> [1. Data Cleaning & Preprocessing] --> [2. Model Training] --> [Saved Model File]
 
 
-**Online Prediction Pipeline:**
+### Online Prediction Pipeline
 [User Input] --> [FastAPI Backend] --> [Load Saved Model] --> [Make Prediction] --> [Display Result]
 
 
@@ -63,7 +63,7 @@ The architecture separates the offline training process from the online predicti
 
 ## Technology Stack
 
-This project is built with modern, open-source technologies.
+This project is built with **modern, open-source technologies**.
 
 - **Backend:** Python, FastAPI
 - **Machine Learning:** Scikit-learn, Pandas, NumPy
@@ -116,35 +116,35 @@ Follow these instructions to get a local copy up and running.
 
 ---
 
-## Usage
+## Project Usage
 
 ### Running the API
 
-To start the FastAPI server, run the following command from the root directory:
+To start the **FastAPI server**, run the following command from the root directory:
 ```bash
 uvicorn app.main:app --reload
 The API will be available at http://127.0.0.1:8000. You can access the interactive API documentation (Swagger UI) at http://127.0.0.1:8000/docs.
 
-Running the Dashboard
+## Running the Dashboard
 To launch the Streamlit dashboard, run:
 
-Bash
+## Bash
 
 streamlit run dashboard.py
 The dashboard will open in your web browser, usually at http://localhost:8501.
 
-Using Docker (Optional)
+## Using Docker (Optional)
 Build and run the application using Docker Compose for a containerized setup.
 
-Bash
+## Bash
 
 docker-compose up --build
 This will start both the FastAPI backend and the Streamlit frontend.
 
-Model Training
+## Model Training
 To train the model from scratch, you can run the training script. This script will process the data, train the model, evaluate it, and save the final model artifact.
 
-Bash
+## Bash
 
 python scripts/train_model.py
 API Endpoints
@@ -170,9 +170,9 @@ JSON
   "prediction_label": "No Disease",
   "probability": 0.92
 }
-(Where prediction: 0 means low risk and prediction: 1 means high risk.)
+(Note: prediction: 0 means low risk and prediction: 1 means high risk.)
 
-Roadmap
+Project Roadmap
 [ ] Phase 1: Core Functionality
 
 [x] Model Training and Evaluation
@@ -203,7 +203,7 @@ Roadmap
 
 See the open issues for a full list of proposed features and known issues.
 
-Contributing
+Project Contributing
 Contributions are greatly appreciated. Please follow these steps:
 
 Fork the Project
@@ -216,19 +216,19 @@ Push to the Branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-License
+## Project License
 Distributed under the MIT License. See LICENSE.txt for more information.
 
-Contact
+## Contact Information
 Rupa Narayanan
 
-Email: rupanarayanan333@gmail.com
+### Email: rupanarayanan333@gmail.com
 
-Phone: +91 6382552533
+### Phone: +91 6382552533
 
-Project Link: https://github.com/your-username/heartguard-ai
+### Project Link: https://github.com/your-username/heartguard-ai
 
-⚠️ Important Security Note: Sharing your personal phone number publicly is not recommended as it can expose you to spam and other privacy risks.
+## ⚠️ Important Security Note: Sharing your personal phone number publicly is not recommended as it can expose you to spam and other privacy risks.
 
-⚠️ Disclaimer
-This project is for educational and research purposes only. The predictions made by HeartGuard AI are not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified health provider with any questions you may have regarding a medical condition
+## Important Disclaimer
+### This project is for educational and research purposes only. The predictions made by HeartGuard AI are not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified health provider with any questions you may have regarding a medical condition.
