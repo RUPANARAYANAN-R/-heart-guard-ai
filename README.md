@@ -56,10 +56,12 @@ This tool provides a simple **REST API** and an interactive **dashboard** for us
 The architecture separates the **offline training process** from the **online prediction service**.
 
 ### Offline Training Pipeline
+
    [Raw Dataset] --> [1. Data Cleaning & Preprocessing] --> [2. Model Training] --> [Saved Model File]
 
 
 ### Online Prediction Pipeline
+ 
    [User Input] --> [FastAPI Backend] --> [Load Saved Model] --> [Make Prediction] --> [Display Result]
 
 
