@@ -216,6 +216,8 @@ Push to the Branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
+---
+
 ## Project License
 Distributed under the MIT License. See LICENSE.txt for more information.
 
