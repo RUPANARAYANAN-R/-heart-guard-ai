@@ -240,7 +240,7 @@ Open a Pull Request
 ---
 
 
-### Project Link: https://github.com/RUPANARAYANAN-R/-heartguard-ai
+### Project Link: https://github.com/RUPANARAYANAN-R/-heart-guard-ai
 
 ---
 
