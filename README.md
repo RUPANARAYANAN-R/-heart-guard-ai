@@ -52,11 +52,11 @@ This tool provides a simple **REST API** and an interactive **dashboard** for us
 The architecture separates the **offline training process** from the **online prediction service**.
 
 ### Offline Training Pipeline
-[Raw Dataset] --> [1. Data Cleaning & Preprocessing] --> [2. Model Training] --> [Saved Model File]
+   [Raw Dataset] --> [1. Data Cleaning & Preprocessing] --> [2. Model Training] --> [Saved Model File]
 
 
 ### Online Prediction Pipeline
-[User Input] --> [FastAPI Backend] --> [Load Saved Model] --> [Make Prediction] --> [Display Result]
+   [User Input] --> [FastAPI Backend] --> [Load Saved Model] --> [Make Prediction] --> [Display Result]
 
 
 ---
@@ -140,11 +140,11 @@ Build and run the application using Docker Compose for a containerized setup.
 
 docker-compose up --build
 This will start both the FastAPI backend and the Streamlit frontend.
-
+```
 ## Model Training
 To train the model from scratch, you can run the training script. This script will process the data, train the model, evaluate it, and save the final model artifact.
 
-## Bash
+Bash
 
 python scripts/train_model.py
 API Endpoints
@@ -172,7 +172,9 @@ JSON
 }
 (Note: prediction: 0 means low risk and prediction: 1 means high risk.)
 
-Project Roadmap
+---
+
+## Project Roadmap
 [ ] Phase 1: Core Functionality
 
 [x] Model Training and Evaluation
@@ -203,7 +205,9 @@ Project Roadmap
 
 See the open issues for a full list of proposed features and known issues.
 
-Project Contributing
+---
+
+## Project Contributing
 Contributions are greatly appreciated. Please follow these steps:
 
 Fork the Project
@@ -215,7 +219,7 @@ Commit your Changes (git commit -m 'Add some AmazingFeature')
 Push to the Branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
-```
+
 ---
 
 ## Project License
