@@ -1,3 +1,12 @@
+This error occurs because the code block for the Mermaid diagram is not closed correctly. When the closing backticks (```) are missing, GitHub's parser tries to read the next line of text ("Technology Stack") as part of the diagram, which causes the parse error.
+
+To fix this, you must replace the entire content of your README.md file to ensure all formatting is correct.
+
+Solution: Complete README Content
+Delete everything currently in your README.md file and replace it with the complete, corrected code below. Click the "Copy" button in the top-right corner of the block and paste it directly into the GitHub editor.
+
+Markdown
+
 # ❤️‍🩹 HeartGuard AI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
