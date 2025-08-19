@@ -47,32 +47,28 @@ This tool provides a simple REST API and an interactive dashboard for users to i
 
 ## How It Works
 
-The project follows a standard machine learning pipeline. The architecture is designed to be simple and modular.
+The project follows a standard machine learning pipeline. The architecture is designed to be simple and modular, separating the offline training process from the online prediction service.
 
 ```mermaid
 graph TD
-    A[Patient Data Input] -->|JSON/Form| B(FastAPI Backend);
-    B --> C{Data Validation & Preprocessing};
-    C --> D[Load Trained Model];
-    D --> E{Perform Inference};
-    E -->|Prediction & Probability| B;
-    B --> F[Return Prediction to Client];
-
-    subgraph "User Interface"
-        G[Streamlit Dashboard]
+    subgraph "Prediction Pipeline (Online)"
+        direction LR
+        UI[Client / Dashboard] --> API{FastAPI Service};
+        API --> P1[1. Validate & Preprocess Data];
+        P1 --> P2[2. Load Saved Model];
+        P2 --> P3[3. Perform Inference];
+        P3 --> P4[4. Return Prediction];
+        P4 --> UI;
     end
-
-    G -->|API Request| B;
-    F -->|Display Result| G;
 
     subgraph "Training Pipeline (Offline)"
-        H[UCI Dataset] --> I(Data Cleaning & EDA);
-        I --> J(Feature Engineering);
-        J --> K(Model Training & Evaluation);
-        K --> L[Save Model Artifact (.pkl)];
+        direction TB
+        DS[Raw Dataset] --> T1[Data Cleaning & Feature Engineering];
+        T1 --> T2[Model Training & Validation];
+        T2 --> MA[Save Model Artifact];
     end
 
-    D -- Loads --> L;
+    P2 -- Loads --- MA;
 Technology Stack
 This project is built with modern, open-source technologies.
 
