@@ -39,9 +39,6 @@ This tool provides a simple REST API and an interactive dashboard for users to i
 
 **Dataset:** This model was trained on the [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+disease), a well-known benchmark in the machine learning community.
 
-![HeartGuard AI Dashboard Screenshot](https://i.imgur.com/example-screenshot.png)
-*(Replace with a screenshot of your actual dashboard)*
-
 ---
 
 ## Key Features
