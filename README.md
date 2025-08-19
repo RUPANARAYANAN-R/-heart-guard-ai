@@ -1,62 +1,58 @@
 ❤️‍🩹 HeartGuard AI
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/)
+[![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 Leveraging machine learning to predict the risk of cardiovascular disease, providing an early warning system for proactive healthcare.
 
-Table of Contents
-About The Project
+---
 
-Key Features
+## Table of Contents
 
-How It Works
+- [About The Project](#about-the-project)
+- [Key Features](#key-features)
+- [How It Works](#how-it-works)
+- [Technology Stack](#technology-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Running the API](#running-the-api)
+  - [Running the Dashboard](#running-the-dashboard)
+- [Model Training](#model-training)
+- [API Endpoints](#api-endpoints)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Disclaimer](#disclaimer)
 
-Technology Stack
+## About The Project
 
-Getting Started
-
-Prerequisites
-
-Installation
-
-Usage
-
-Running the API
-
-Running the Dashboard
-
-Model Training
-
-API Endpoints
-
-Roadmap
-
-Contributing
-
-License
-
-Contact
-
-Disclaimer
-
-About The Project
 Cardiovascular diseases (CVDs) are the leading cause of death globally. Early detection and risk stratification are crucial for effective prevention and management. HeartGuard AI is a project designed to address this challenge by using a machine learning model to predict a patient's risk of heart disease based on a set of medical and demographic attributes.
 
 This tool provides a simple REST API and an interactive dashboard for users to input patient data and receive an instant risk assessment. The core of this project is a trained classification model that has learned patterns from historical patient data.
 
-Dataset: This model was trained on the UCI Heart Disease Dataset, a well-known benchmark in the machine learning community.
+**Dataset:** This model was trained on the [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+disease), a well-known benchmark in the machine learning community.
 
-(Replace with a screenshot of your actual dashboard)
+![HeartGuard AI Dashboard Screenshot](https://i.imgur.com/example-screenshot.png)
+*(Replace with a screenshot of your actual dashboard)*
 
-Key Features
-✨ High-Accuracy Prediction: Utilizes a Gradient Boosting Classifier for robust and accurate risk prediction.
-✨ RESTful API: A clean, fast, and scalable API built with FastAPI for easy integration into other applications.
-✨ Interactive Dashboard: A user-friendly web interface created with Streamlit for real-time predictions and data visualization.
-✨ Feature Importance: Provides insights into which factors are most influential in predicting heart disease risk.
-✨ Containerized: Docker support for easy setup, deployment, and scalability.
+## Key Features
 
-How It Works
+✨ **High-Accuracy Prediction:** Utilizes a Gradient Boosting Classifier for robust and accurate risk prediction.
+✨ **RESTful API:** A clean, fast, and scalable API built with FastAPI for easy integration into other applications.
+✨ **Interactive Dashboard:** A user-friendly web interface created with Streamlit for real-time predictions and data visualization.
+✨ **Feature Importance:** Provides insights into which factors are most influential in predicting heart disease risk.
+✨ **Containerized:** Docker support for easy setup, deployment, and scalability.
+
+## How It Works
+
 The project follows a standard machine learning pipeline. The architecture is designed to be simple and modular.
 
-Code snippet
-
+```mermaid
 graph TD
     A[Patient Data Input] -->|JSON/Form| B(FastAPI Backend);
     B --> C{Data Validation & Preprocessing};
@@ -110,7 +106,7 @@ Clone the repository:
 
 Bash
 
-git clone https://github.com/your-username/heartguard-ai.git
+git clone [https://github.com/your-username/heartguard-ai.git](https://github.com/your-username/heartguard-ai.git)
 cd heartguard-ai
 Create and activate a virtual environment:
 
@@ -267,4 +263,4 @@ Project Link: https://github.com/your-username/heartguard-ai
 ⚠️ Important Security Note: Sharing your personal phone number publicly is not recommended as it can expose you to spam and other privacy risks. It is safer to use email or a professional networking profile for public contact information.
 
 ⚠️ Disclaimer
-This project is for educational and research purposes only. The predictions made by HeartGuard AI are not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health providers with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read or seen in this application.  
+This project is for educational and research purposes only. The predictions made by HeartGuard AI are not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health providers with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read or seen in this application.
