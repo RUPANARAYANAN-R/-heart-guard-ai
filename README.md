@@ -130,7 +130,7 @@ To start the FastAPI server, run the following command from the root directory:
 uvicorn app.main:app --reload
 The API will be available at http://127.0.0.1:8000. You can access the interactive API documentation (Swagger UI) at http://127.0.0.1:8000/docs.
 
-Running the Dashboard
+## Running the Dashboard
 To launch the Streamlit dashboard, run:
 
 Bash
