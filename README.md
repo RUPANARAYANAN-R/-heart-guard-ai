@@ -40,9 +40,13 @@ This tool provides a simple **REST API** and an interactive **dashboard** for us
 ## Key Features
 
 ✨ **High-Accuracy Prediction:** Utilizes a **Gradient Boosting Classifier** for robust and accurate risk prediction.
+
 ✨ **RESTful API:** A clean, fast, and scalable API built with **FastAPI** for easy integration into other applications.
+
 ✨ **Interactive Dashboard:** A user-friendly web interface created with **Streamlit** for real-time predictions and data visualization.
+
 ✨ **Feature Importance:** Provides insights into which factors are most influential in predicting heart disease risk.
+
 ✨ **Containerized:** **Docker** support for easy setup, deployment, and scalability.
 
 ---
