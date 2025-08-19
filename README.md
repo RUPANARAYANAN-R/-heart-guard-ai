@@ -1,4 +1,4 @@
-❤️‍🩹 HeartGuard AI
+# ❤️‍🩹 HeartGuard AI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/)
@@ -29,6 +29,8 @@ Leveraging machine learning to predict the risk of cardiovascular disease, provi
 - [Contact](#contact)
 - [Disclaimer](#disclaimer)
 
+---
+
 ## About The Project
 
 Cardiovascular diseases (CVDs) are the leading cause of death globally. Early detection and risk stratification are crucial for effective prevention and management. HeartGuard AI is a project designed to address this challenge by using a machine learning model to predict a patient's risk of heart disease based on a set of medical and demographic attributes.
@@ -37,6 +39,11 @@ This tool provides a simple REST API and an interactive dashboard for users to i
 
 **Dataset:** This model was trained on the [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+disease), a well-known benchmark in the machine learning community.
 
+![HeartGuard AI Dashboard Screenshot](https://i.imgur.com/example-screenshot.png)
+*(Replace with a screenshot of your actual dashboard)*
+
+---
+
 ## Key Features
 
 ✨ **High-Accuracy Prediction:** Utilizes a Gradient Boosting Classifier for robust and accurate risk prediction.
@@ -44,6 +51,8 @@ This tool provides a simple REST API and an interactive dashboard for users to i
 ✨ **Interactive Dashboard:** A user-friendly web interface created with Streamlit for real-time predictions and data visualization.
 ✨ **Feature Importance:** Provides insights into which factors are most influential in predicting heart disease risk.
 ✨ **Containerized:** Docker support for easy setup, deployment, and scalability.
+
+---
 
 ## How It Works
 
